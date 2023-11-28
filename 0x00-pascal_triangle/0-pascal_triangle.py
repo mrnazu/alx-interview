@@ -6,7 +6,7 @@ def pascal_triangle(n): # n = rows of triangles or number of rows
         rows = []
 
         for y in range(x + 1):
-            result = combination(x , y)
+            result = comb(x , y)
 
             rows.append(result) # append results to the rows
 
