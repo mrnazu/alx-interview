@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-"""
-Determine if all the boxes can be opened.
+    """
+    Determine if all the boxes can be opened.
 
-:param boxes: A list of lists where each inner list represents a box.
-:return: True if all boxes can be opened, else return False.
-"""
+    :param boxes: A list of lists where each inner list represents a box.
+    :return: True if all boxes can be opened, else return False.
+    """
 
 def canUnlockAll(boxes):
     """
@@ -26,4 +26,5 @@ def canUnlockAll(boxes):
             keys.extend(boxes[key])
 
     return len(open_boxes) == len(boxes)
+
 
