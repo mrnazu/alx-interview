@@ -7,27 +7,23 @@ Problem: You have n number of locked boxes in front of you.
 Task: Write a method that determines if all the boxes can be opened.
 """
 
+
 def canUnlockAll(boxes):
     """
-    Determine if all the boxes can be opened.
-
-    Args:
-        boxes (list of list): A list of lists where each inner list represents a box.
-
-    Returns:
-        bool: True if all boxes can be opened, else return False.
+    Function that checks with boolean value if the list type and
+    length to invoke two for iterations one to traverse the list
+    and the other to compaer if key is idx or not in order to open
     """
-    if not isinstance(boxes, list) or len(boxes) == 0:
+    if type(boxes) is not list:
         return False
-    
+    elif (len(boxes)) == 0:
+        return False
     for k in range(1, len(boxes) - 1):
         boxes_checked = False
         for idx in range(len(boxes)):
             boxes_checked = k in boxes[idx] and k != idx
             if boxes_checked:
                 break
-        if not boxes_checked:
+        if boxes_checked is False:
             return boxes_checked
-    
     return True
-
