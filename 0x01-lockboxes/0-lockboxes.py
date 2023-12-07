@@ -31,6 +31,3 @@ def canUnlockAll(boxes):
     
     return True
 
-if __name__ == "__main__":
-    pass  # Add any script-specific execution logic here if needed
-
