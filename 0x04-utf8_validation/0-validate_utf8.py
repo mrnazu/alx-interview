@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+UTF-8 Validation Script
+"""
 
 def validUTF8(data):
     """
@@ -60,8 +63,9 @@ def validate_remaining_bytes(data, start, length):
 
     return True
 
-# Test the function
-data_set = [197, 130, 1]  # Example UTF-8 encoded data set
-result = validUTF8(data_set)
-print(result)
+if __name__ == "__main__":
+    # Test the function
+    data_set = [197, 130, 1]  # Example UTF-8 encoded data set
+    result = validUTF8(data_set)
+    print(result)
 
