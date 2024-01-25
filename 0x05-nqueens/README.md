@@ -1,20 +1,12 @@
-# 0-nqueens.py
-The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard.... 
+# N Queens
+This project contains interview coding challenges.
 
-In chess, a queen can attack horizontally, vertically, and diagonally. The N-queens problem asks: How can N queens be placed on an NxN chessboard so that no two of them attack each other?
+# Setup
+```bash
+touch 0-nqueens.py
+chmod +x 0-nqueens.py
+./0-nqueens.py 4
 
-Usage: nqueens N
-- If the user called the program with the wrong number of arguments, print Usage: nqueens N, followed by a new line, and exit with the status 1
-
-
-where N must be an integer greater or equal to 4
-- If N is not an integer, print N must be a number, followed by a new line, and exit with the status 1
-- If N is smaller than 4, print N must be at least 4 , followed by a new line, and exit with the status 1
-
-    
-The program should print every possible solution to the problem
-- One solution per line
-- Format: see example
-- You don’t have to print the solutions in a specific order
-
-You are only allowed to import the sys module
+# Lint.
+pycodestyle 0-nqueens.py
+```
