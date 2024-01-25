@@ -1,15 +1,30 @@
 #!/usr/bin/python3
 """
-Function that calculates the min operations to copy and paste letters
+Module for minimum operations problem
 """
 
-
 def minOperations(n):
-    nOpe = 0
-    minOpe = 2
+    """
+    Calculates the fewest number of operations needed to result in exactly n H characters.
+    """
+    if not isinstance(n, int) or n <= 0:
+        return 0
+
+    operations = 0
+    divisor = 2
+
     while n > 1:
-        while n % minOpe == 0:
-            nOpe += minOpe
-            n /= minOpe
-        minOpe += 1
-    return nOpe
+        while n % divisor == 0:
+            operations += divisor
+            n //= divisor
+        divisor += 1
+
+    return operations
+
+if __name__ == "__main__":
+    n = 4
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+
+    n = 12
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+
